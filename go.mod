@@ -1,4 +1,4 @@
-module github.com/toddbirchard/ghost-session-lambda
+module github.com/toddbirchard/ghost-member-lambda
 
 go 1.14
 

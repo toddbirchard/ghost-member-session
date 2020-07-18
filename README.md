@@ -2,9 +2,9 @@
 
 ![Go](https://img.shields.io/badge/Go-1.14-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
-[![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghost-session-lambda.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/ghost-session-lambda/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghost-session-lambda.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/toddbirchard/ghost-session-lambda/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghost-session-lambda.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/ghost-session-lambda/network)
+[![GitHub Issues](https://img.shields.io/github/issues/toddbirchard/ghost-member-lambda.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/ghost-member-lambda/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghost-member-lambda.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/toddbirchard/ghost-member-lambda/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghost-member-lambda.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/ghost-member-lambda/network)
 
 Check the active user session belongs to a registered Ghost member. Returns member account information upon success.
 
