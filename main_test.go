@@ -1,12 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"net/url"
 	"testing"
-	"time"
-	"fmt"
 )
 
 func TestCreateRequest(t *testing.T) {
@@ -17,15 +16,18 @@ func TestCreateRequest(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	req := &http.Request{URL: endpoint, Header: headers}
+	fmt.Println(req)
 }
 
+/* func TestGetUserSession(t *testing.T) {
 	// Create HTTP client with timeout
 	client := &http.Client{
 		Timeout: 30 * time.Second,
 	}
 
 	// Make request
-	req := &http.Request{URL: endpoint, Header: headers}
+	req := &http.Request{URL: t.endpoint, Header: headers}
 	res, reqError := client.Do(req)
 	if reqError != nil {
 		log.Fatal(reqError)
@@ -40,5 +42,4 @@ func TestCreateRequest(t *testing.T) {
 	if res.StatusCode != http.StatusOK {
 		t.Log("Status should be ok, got %i", res.StatusCode)
 	}
-
-}
+}*/

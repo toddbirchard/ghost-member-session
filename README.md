@@ -1,4 +1,4 @@
-# Ghost Session Lambda
+# Ghost Member Lambda
 
 ![Go](https://img.shields.io/badge/Go-1.14-blue.svg?logo=go&longCache=true&logoColor=white&colorB=88C0D0&style=flat-square&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
@@ -6,13 +6,13 @@
 [![GitHub Stars](https://img.shields.io/github/stars/toddbirchard/ghost-session-lambda.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/toddbirchard/ghost-session-lambda/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/toddbirchard/ghost-session-lambda.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/toddbirchard/ghost-session-lambda/network)
 
-Verifies whether the current user is a Ghost member and returns general account information upon success.
+Check the active user session belongs to a registered Ghost member. Returns member account information upon success.
 
 ### Example Usage
 
 **Request:**
 ```bash
-$ curl https://hackersandslackers.app/.netlify/functions/ghost-session-lambda
+$ curl https://hackersandslackers.app/.netlify/functions/ghost-member-lambda
 ```
 
 **Response:**

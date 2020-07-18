@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"io/ioutil"
@@ -24,22 +25,20 @@ func Handler(ctx context.Context, request events.APIGatewayProxyRequest) (*event
 
 func CreateRequest(request events.APIGatewayProxyRequest) *http.Request {
 	endpoint, err := url.Parse("https://hackersandslackers.app/members/api/member/")
-	var headers http.Header
+	var headers = http.Header{}
 	headers.Add("cookie", request.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println(endpoint)
+	fmt.Println(headers)
 	req := &http.Request{URL: endpoint, Header: headers}
 	return req
 }
 
 func GetUserSession(req *http.Request) string {
-	// Create HTTP client with timeout
-	client := &http.Client{
-		Timeout: 30 * time.Second,
-	}
-
 	// Request account information by session token.
+	client := Client()
 	res, reqError := client.Do(req)
 	if reqError != nil {
 		log.Fatal(reqError)
@@ -57,7 +56,15 @@ func GetUserSession(req *http.Request) string {
 	return string(data)
 }
 
+func Client() *http.Client {
+	// Create HTTP client
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+	return client
+}
+
 func main() {
-	// Make the Handler available
+	// Initialize Handler
 	lambda.Start(Handler)
 }
