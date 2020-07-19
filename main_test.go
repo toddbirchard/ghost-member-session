@@ -16,27 +16,3 @@ func TestCreateRequest(t *testing.T) {
 	req.Header.Add("cookie", cookie)
 	fmt.Println(req)
 }
-
-/* func TestGetUserSession(t *testing.T) {
-	// Create HTTP client with timeout
-	client := &http.Client{
-		Timeout: 30 * time.Second,
-	}
-
-	// Make request
-	req := &http.Request{URL: t.endpoint, Header: headers}
-	res, reqError := client.Do(req)
-	if reqError != nil {
-		log.Fatal(reqError)
-	}
-	if res.StatusCode != 200 {
-		log.Fatal("status code error: %i", res.StatusCode)
-	}
-	fmt.Println("Hello")
-	fmt.Println(res)
-
-	// We want our status to be 200
-	if res.StatusCode != http.StatusOK {
-		t.Log("Status should be ok, got %i", res.StatusCode)
-	}
-}*/
